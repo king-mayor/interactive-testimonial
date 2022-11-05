@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F2F2DE;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+.container img {
+    width: 300px;
+    height: 400px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    position: relative;
+}
+.bio {
+    width: 450px;
+    height: 225px;
+    background-color: #7F55A9;
+    box-shadow: 5px 5px 4px #626262;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #ffff;
+    position: relative;
+    top: 80px;
+    left: 15px;
+    z-index: 2;
+    animation: slide-in 0.6s ease;
+}
+@keyframes slide-in {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.img-section {
+    animation: slide-left 0.6s ease;
+}
+@keyframes slide-left {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.bio p {
+    margin-top: 15px;
+    line-height: 25px;
+}
+.img-section img{
+    border-radius: 15px;
+}
+.testimonial1 {
+    display: flex;
+}
+ .testimonial2, .testimonial3, .testimonial4, .testimonial5 {
+    display: none;
+ }
+/* .container {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+} */
+.btn  {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(20, 19, 19);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn:active{
+    background-color: #ffff;
+}
+.btn-links {
+    position: absolute;
+    bottom: 20%;
+    left:50%;
+    text-align: center;
+    display: flex;
+    gap: 15px;
+}
+footer{
+    padding-bottom: 30px;
+    position: relative;
+    bottom: 20px;
+}
+@media all and (max-width: 900px){
+    .testimonial1,.testimonial2, .testimonial3, .testimonial4, .testimonial5 {
+        flex-direction: column-reverse;
+    }
+    .bio {
+        top: -0px;
+        width: 250px;
+        height: auto;
+    }
+    .container img {
+        width: 250px;
+    }
+    .btn-links {
+        position: absolute;
+        bottom: -150px;
+        left: 40%;
+        text-align: center;
+        display: flex;
+        gap: 15px;
+    }
+    
+}
